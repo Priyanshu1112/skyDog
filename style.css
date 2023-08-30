@@ -1,0 +1,716 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'northdenregular';
+    src: url("assests/Fonts/northdenrough-free-webfont.woff2") format("woff2"),
+      url("northden-free-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'northden';
+    src: url("assets/Fonts/northden-free-webfont.woff2") format("woff2"),
+      url("assets/Fonts/northdenrough-free-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Gotham';
+    src: url('assets/Fonts/GothamBook.ttf');
+    /* font-weight: bold; */
+  }
+  
+
+.main-container{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    /* cursor: none; */
+}::-webkit-scrollbar{
+    display: none;
+}
+
+.heading{
+    color: #aaa;
+    /* font-family: NORTHDEN ROUGH Regular; */
+    font-family: 'northdenregular';
+    font-size: 14vmin;
+    letter-spacing: .5vmin;
+    
+    }
+  
+    .para{
+      color: #aaa;
+    text-align: center;
+    font-family: 'Gotham';
+    width: 75%;
+    line-height: 3vmin;
+    font-weight: bold;
+    letter-spacing: .1vmin;
+    }
+  
+    .btn1{
+      padding: 1.2vmin 1.5vmax;
+      background-color: transparent;
+      border: 1px solid #aaa;
+      color: #aaa;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: .3s all;
+    }
+  
+    .btn1:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  
+    .btn2{
+        opacity: 1;
+      padding: 1.2vmin 1.5vmax;
+      /* transition: .3s all; */
+      position: relative;
+      font-weight: bold;
+      cursor: pointer;
+      border: 1px solid #aaa;
+      background-color: transparent;
+    }
+
+   .btn2::before{
+    content: 'Your content';
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #aaa; */
+    position: absolute;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transform: translate(-.5vmin, -.5vmin);
+    /* z-index: -1; */
+    transition: 0.3s all;
+   }
+
+   .btn2:hover::before{
+    transform: translate(0,0);
+   }
+
+nav{
+    opacity: 1;
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    padding: 3vmin 3vmax;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: .3s all;
+}
+
+
+nav div{
+    display: flex;
+    align-items: center;
+    gap: 3vmin;
+}
+
+nav img{
+    transition: .3s all;
+}
+
+nav  img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+nav .menu{
+    display: none;
+}
+
+.main-container .video-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.video-container video{
+    width: 100vw;
+    opacity: 0;
+}
+
+section{
+    width: 100%;
+    /* min-height: 100vh; */
+    background: #000;
+    overflow: hidden;
+}
+
+.section1{
+    margin-top: 70vh;
+}
+
+.s1-banner{
+    height: 55vh;
+    /* background: red; */
+    display: flex;
+}
+
+.s1-banner div{
+  flex: 1;
+  position: relative;
+}
+
+.s1-banner div img{
+    opacity: 0;
+  position: absolute;
+  bottom: -10vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.s1-text{
+  position: relative;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.s1-text h1, .s1-text p{
+    opacity: 1;
+    /* margin-bottom: -10vh; */
+}
+
+.btn2.visit::before{
+    content: 'Visit Collections'
+}
+
+/* -----------------------SECTION2--------------------------------- */
+.section2{
+    height: fit-content;
+    display: flex;
+    padding: 8vmax 5vmax;
+    gap: 4vmax;
+    /* align-items: center; */
+    /* border: 1px solid red; */
+}
+
+.section2 .s2-left{
+    width: 40%;
+    /* border: 1px solid green; */
+}
+
+.section2 .s2-right{
+ /* border: 1px solid yellow; */
+    width: 60%;
+}
+
+.s2-left div{
+    width: 100%;
+    border: 1px solid #aaa;
+}
+
+
+
+.s2-left div img{
+    width: 100%;
+    transform: translate(-1vmin, -.5vmin);
+}
+
+
+
+.s2-right h1{
+    font-size: 12vmin;
+}
+
+.s2-right p{
+    text-align: start;
+    margin: 1vmax 0;
+}
+
+.btn2.know::before{
+    content: 'Know More'
+}
+
+/* ------------------SECTION3--------------------------- */
+.section3{
+    /* border: 1px solid pink; */
+    padding: 3vmax 5vmax;
+    font-family: 'Gotham';
+    color: #aaa;
+    font-weight: 700;
+    min-height: 100vh;
+}
+
+.s3-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vmin;
+}
+
+.s3-head p{
+    font-weight: 100;
+    padding-bottom: .3vmin;
+    border-bottom: 1px solid #aaa;
+}
+
+.s3-top, .s3-bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 1vmin;
+}
+
+.s3-top{
+    margin-bottom: 3vmin;
+}
+
+.card{
+    opacity: 1;
+    border: 1px solid #aaa;
+    padding: 1vmin;
+    cursor: pointer;
+}
+
+
+.card-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vmin;
+    font-weight: 100;
+}
+
+
+
+.card-title div{
+    display: flex;
+    gap: 1vmin;
+    align-items: center;
+}
+
+.card-title button{
+    padding: .5vmin .7vmax;
+    border-radius: 5px;
+    background: rgba(170,170,170,0.15);
+    border: none;
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nft img{
+    width: 100%;
+}
+
+.card-bottom p:first-child{
+    margin: 1vmin 0;
+}
+
+.card-bottom p:nth-child(2){
+    font-weight: 100;
+    
+}
+
+
+
+/* -------------SECTION4----------------------------- */
+.section4{
+    min-height: 120vh;
+    padding:  5vmax;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.s4-text{
+    width: 60%;
+    /* border: 1px solid blue; */
+}
+
+.s4-text h1{
+    margin-top: 5vmax;
+    font-size: 12vmin;
+}
+
+.s4-text p{
+    width: 90%;
+    text-align: start;
+    margin: 5vmin 0;
+}
+
+.s4-text button{
+    opacity: 1;
+}
+
+ .section4 .s4-banner{
+    position: absolute;
+    top: 5vmax;
+    left: 65%;
+    transform: translate( -50%, 0);
+}
+
+.s4-banner img{
+    opacity: 1;
+    height: 100%;
+    transform-origin: bottom center;
+}
+
+/* -----------SECTION5------------------- */
+.section5{
+  color: #aaa; 
+  padding: 5vmin 2vmin; 
+  display: flex;
+  flex-direction: column;
+}
+
+.section5 p:nth-child(odd){
+    font-size: 10vmin;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    color: #AAA;
+font-family: NORTHDEN ROUGH;
+margin-bottom: 3vmin;
+/* margin-left: -50vw; */
+}
+
+.section5 p:nth-child(even){
+    font-size: 10vmin;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    color: transparent;
+    font-family: NORTHDEN;
+    margin-bottom: 3vmin;
+    -webkit-text-stroke: 1px #aaa;
+}
+
+/* ------------SECTION6---------------------- */
+.section6{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3vmax;
+    align-items: center;
+    padding: 5vmax;
+}
+
+.section6 h1{
+    font-style: 12vmin;
+}
+
+.section6 p{
+    font-weight: 300;
+    color: white;
+    font-size: 3vmin;
+}
+
+.section6 div{
+    height: 70vh;
+}
+
+.section6 div img{
+    height: 100%;
+    animation: floatingAndRotating 10s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes floatingAndRotating {
+    0%, 100% {
+      transform: translateY(0) rotateZ(0deg) ; 
+    }
+    25% {
+      transform: translateY(-20px) rotateZ(5deg) ; 
+  }
+  75% {
+    transform: translateY(20px) rotateZ(-5deg) ; 
+}
+}
+
+/* --------------SECTION7--------------------- */
+.section7{
+    min-height: 100vh;
+    padding: 0 5vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s7-box{
+    display: flex;
+    padding: 3vmin;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #AAA;
+    width: 80%;
+}
+
+.s7-box-left{
+    width: 60%;
+    /* border: 1px solid red; */
+}
+
+.s7-box-right{
+    width: 40%;
+}
+
+.s7-box-left h1{
+    font-size: 10vmin;
+    margin-bottom: 1vmin;
+}
+
+.s7-box-left p{
+    font-size: 3vmin;
+    color: white;
+    font-weight: 300;
+    text-align: start;
+    line-height: 4vmin;
+    letter-spacing: normal;
+}
+
+.s7-box-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vmin;
+}
+
+form input{
+    padding: 2vmin 4vmin;
+    background-color: transparent;
+    border: 1px solid #AAA;
+    border-radius: 8px;
+    color: #aaa;
+}
+
+form button{
+    padding: 2vmin 4vmin;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.social-media p{
+    font-weight: 300;
+    color: white;
+    /* line-height: 4vmin; */
+    letter-spacing: normal;
+}
+
+.social-media svg path{
+    cursor: pointer;
+}
+
+footer{
+    border-top: 1px solid #aaa;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vmin 3vmin;
+}
+
+footer p{
+   font-family: Gotham;
+   color: #fff;
+   font-weight: 400;
+   font-size: 1.8vmin;
+   cursor: pointer;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    gap: 4vmin;
+    font-family: Gotham;
+   color: #fff;
+   font-weight: 400;
+   font-size: 1.8vmin;
+   cursor: pointer;
+}
+
+/* --------------------------------------------------- */
+@media (max-width: 1189px){
+    .heading{
+        font-size: 10vmin;
+    }
+}
+@media (max-width: 768px) {
+    nav div{
+        display: none;
+    }
+
+    nav .menu{
+        display: initial;
+        color: #aaa;
+    }
+
+    .video-container{
+        display: none;
+    }
+
+
+    .section1{
+        margin-top: 0;
+    }
+
+    .s1-banner div img{
+        height: 80%;
+        aspect-ratio: 1/2;
+    }
+    .s1-banner div:nth-child(1) img, .s1-banner div:nth-child(7) img{
+        height: 50%;
+        aspect-ratio: 1/2;
+    }
+    .s1-banner div:nth-child(2) img, .s1-banner div:nth-child(6) img{
+        height: 60%;
+        aspect-ratio: 1/2;
+    }
+    .s1-banner div:nth-child(3) img, .s1-banner div:nth-child(5) img{
+        height: 70%;
+        aspect-ratio: 1/2;
+    }
+
+    .heading{
+        font-size: 8vmin;
+    }
+
+    .para{
+        letter-spacing: normal;
+        font-weight: normal;
+        width: 90%;
+        line-height: 3.5vmin;
+    }
+
+    .section2{
+        flex-direction: column;
+    }
+
+    .s2-left, .s2-right{
+        width: 100% !important;
+    }
+
+    .s2-right, .s2-right p{
+        text-align: center;
+    }
+
+    .s2-right h1{
+        font-size: 6vmin;
+    }
+
+    .s3-head p, .s3-head h3{
+        font-size: 3vmin;
+    }
+
+    .s3-top, .s3-bottom{
+        flex-wrap: wrap;
+    }
+
+    .card{
+        margin: 0 auto;
+        margin-bottom: 2vmin;
+    }
+
+    .section4{
+        min-height: 100vh;
+        padding-bottom: 0;
+    }
+
+    .section4 .s4-banner{
+        height: 50%;
+        left: 50%;
+        transform: translateY(50%);
+
+    }
+
+    .s4-banner img{
+        aspect-ratio: 1/2;       
+    }
+
+    .section6 div img{
+        width: 100%;
+        aspect-ratio: 2/3;
+    }
+
+    .section7{
+        padding: 3vmax;
+    }
+
+    .s7-box{
+        flex-direction: column;
+        gap: 3vmin;
+        padding: 1.5vmin;
+    }
+
+    .s7-box-left h1{
+        text-align: center;
+        font-size: 7vmin;
+    }
+
+    .s7-box-left p{
+        font-size: 2.5vmin;
+        text-align: center;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .social-media img{
+        width: 50vw;
+    }
+
+    .social-media svg path{
+        font-size: 4vmin;
+    }
+
+    footer{
+        align-items: center;
+    }
+
+    footer ul{
+        flex-direction: column;
+        padding: 2vmin 1vmin;
+        gap: 1vmin;
+    }
+}
